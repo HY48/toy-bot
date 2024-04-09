@@ -1,0 +1,34 @@
+[package]
+name = "toy-bot"
+authors = ["HY48"]
+version = "0.0.1"
+edition = "2021"
+readme = "README.md"
+description = "Simple discord bot made to brush up on rust and play around with poise/serenity framework."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["rt", "rt-multi-thread"] }
+poise = "0.6"
+env_logger = "0.11"
+rand = "0.8.5"
+serde = "1.0.19"
+serde_json = "1.0.11"
+serde_derive = "1.0.19"
+dotenv = "0.15"
+reqwest = { version = "0.12", features = ["json"] }
+
+
+[dependencies.serenity]
+version = "0.12"
+default-features = false
+features = [
+    "builder",
+    "cache",
+    "gateway",
+    "http",
+    "framework",
+    "standard_framework",
+    "rustls_backend",
+]
